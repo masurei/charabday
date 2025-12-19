@@ -1,0 +1,128 @@
+@font-face {
+  font-family: circleoflove;
+  src: url(https://dl.dropbox.com/s/z2e9i1xoavnm87z/circle-of-love.regular.ttf);
+}
+@font-face {
+  font-family: starborn;
+  src: url(https://dl.dropbox.com/s/8p8mi5uzbekohv7/Starborn.ttf);
+}
+body {
+    background-image: url('https://i.pinimg.com/1200x/8e/05/67/8e05670def0a156e713f9fb09c9edf39.jpg');
+    background-size: 200px 200px;
+    padding:10em 0;
+}
+mark {
+    padding: .2em;
+    border-radius: 5px;
+    border: dashed 1px white;
+    background: #79c9e0;
+    box-shadow: 0 0 0 3px #79c9e0;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}
+#cont {
+  position:relative;
+left:50%;
+width:28em;
+height:18em;
+background-color:transparent;
+z-index:999;
+}
+
+#cover {
+width:14em;
+height:18em;
+background-image:url("https://files.catbox.moe/co3ud2.jpeg");
+background-size: 300px;
+background-position:center;
+position:absolute;
+z-index:998;
+top: calc(-1 * var(--sw));
+	right: calc(-1 * var(--sw));
+perspective: 1000px;
+transform-origin: left;
+	transform-style: preserve-3d;
+    transform:translateX(13em);
+animation:backflip 1.7s cubic-bezier(.75,.03,.4,.97);
+animation-fill-mode:forwards;
+border: 5px solid;
+border-image-slice: 1;
+border-image-source: linear-gradient(360deg, #79c9e0, #F86594);
+}
+
+@keyframes backflip {
+	100% {
+		transform: rotateY(0) translateX(0) skewY(0);
+	}
+
+	50% {
+		transform: rotateY(-90deg) translateX(0em) skewY(-20deg);
+	}
+
+	0% {
+		transform: rotateY(-180deg) translateX(0em) skewY(0);
+	}
+}
+
+#cont:hover #cover {
+animation:flip 1.7s cubic-bezier(.75,.03,.4,.97);
+animation-fill-mode:forwards;
+}
+
+@keyframes flip {
+	0% {
+		transform: rotateY(0) translateX(0) skewY(0);
+	}
+
+	50% {
+		transform: rotateY(-90deg) translateX(0em) skewY(-20deg);
+	}
+
+	100% {
+		transform: rotateY(-180deg) translateX(0em) skewY(0);
+	}
+}
+
+#page {
+overflow:scroll;
+width:14em;
+height:18.6em;
+background-color:rgb(255, 255, 255);
+position:relative;
+box-sizing: border-box;
+border-style: solid;
+border-width: 5px 5px 5px 0;
+border-image-slice: 1;
+border-image-source: linear-gradient(360deg, #79c9e0, #F86594);
+font-family: circleoflove;
+color: #fc91a5;
+}
+
+#page p {
+margin:.5em;
+line-height: 1.8em;
+}
+
+#pat {
+    margin: auto;
+    display: block;
+    width: 62.5%;
+}
+.coverdiv {
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+#usa {
+    margin: .5em auto;
+    display: block;
+    width: 90%;
+    border-width: 7px;
+    border-style:solid; 
+    border-image: url("https://img-fotki.yandex.ru/get/4602/28257045.844/0_7d5c6_2de543e9_XXXL") 35 fill round; 
+}
+#rainbow {
+    font-family: starborn;
+    font-size: 1.5em;
+    filter: drop-shadow(1px 1px 0 #fff) drop-shadow(-1px 1px 0 #888) drop-shadow(0 -1px 0 #888) drop-shadow(1px 0 #fff);
+}
